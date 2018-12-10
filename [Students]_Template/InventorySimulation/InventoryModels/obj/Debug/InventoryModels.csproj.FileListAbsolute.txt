@@ -20,3 +20,16 @@ C:\Users\Osama\Desktop\Task 4\[Students]_Template - Copy\InventorySimulation\Inv
 C:\Users\Osama\Desktop\Task 4\[Students]_Template - Copy\InventorySimulation\InventoryModels\bin\Debug\InventoryModels.pdb
 C:\Users\Osama\Desktop\Task 4\[Students]_Template - Copy\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.dll
 C:\Users\Osama\Desktop\Task 4\[Students]_Template - Copy\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.pdb
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.csprojResolveAssemblyReference.cache
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.dll
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\InventoryModels.dll
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\InventoryModels.pdb
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\mscorlib.dll
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\System.Net.Http.dll
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\System.Net.Http.xml
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normidna.nlp
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normnfc.nlp
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normnfd.nlp
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normnfkc.nlp
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normnfkd.nlp
+E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.pdb

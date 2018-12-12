@@ -34,9 +34,9 @@ namespace InventoryModels
         public PerformanceMeasures PerformanceMeasures { get; set; }
         public void start_simulation()
         {
-            SimulationTable = new List<SimulationCase>();
+            //SimulationTable = new List<SimulationCase>();
             simulate();
-            PerformanceMeasures = new PerformanceMeasures();
+            //PerformanceMeasures = new PerformanceMeasures();
             this.PerformanceMeasures.calculate_PM(SimulationTable);
         }
         public void simulate()

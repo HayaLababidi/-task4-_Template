@@ -85,3 +85,14 @@ E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Templat
 E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\normnfd.nlp
 E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\normnfkc.nlp
 E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\normnfkd.nlp
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\InventorySimulation.exe.config
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\obj\Debug\InventorySimulation.exe
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\obj\Debug\InventorySimulation.pdb
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\InventorySimulation.exe
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\InventorySimulation.pdb
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\InventoryModels.dll
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\bin\Debug\InventoryModels.pdb
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\obj\Debug\InventorySimulation.csprojResolveAssemblyReference.cache
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\obj\Debug\InventorySimulation.Form1.resources
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\obj\Debug\InventorySimulation.Properties.Resources.resources
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventorySimulation\obj\Debug\InventorySimulation.csproj.GenerateResource.Cache

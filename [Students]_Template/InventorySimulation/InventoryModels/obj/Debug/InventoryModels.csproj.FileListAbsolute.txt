@@ -33,3 +33,7 @@ E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Templat
 E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normnfkc.nlp
 E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\normnfkd.nlp
 E:\university\Fourth Year\Simulation\Project\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.pdb
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\InventoryModels.dll
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\bin\Debug\InventoryModels.pdb
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.dll
+E:\year4_1\Simulation\Tasks\Lab8 - Task4\-task4-_Template\[Students]_Template\InventorySimulation\InventoryModels\obj\Debug\InventoryModels.pdb

@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InventoryTesting;
+using InventoryModels;
 
 namespace InventorySimulation
 {
     public partial class Form1 : Form
     {
-        InventoryModels.SimulationSystem sys;
+        SimulationSystem sys;
         string file_path;
         string test_message;
 
@@ -49,7 +50,7 @@ namespace InventorySimulation
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            sys = new InventoryModels.SimulationSystem();
+            sys = new SimulationSystem();
 
             if (comboBox1.SelectedIndex == 0)
             {

@@ -32,8 +32,98 @@ namespace InventoryModels
 
         public List<SimulationCase> SimulationTable { get; set; }
         public PerformanceMeasures PerformanceMeasures { get; set; }
+        public void start_simulation()
+        {
+            SimulationTable = new List<SimulationCase>();
+            simulate();
+            PerformanceMeasures = new PerformanceMeasures();
+            this.PerformanceMeasures.calculate_PM(SimulationTable);
+        }
+        public void simulate()
+        {
+            int O_Quantity = 0;
+            int temp_shortage = 0;
+            SimulationCase temp = new SimulationCase();
+            temp.Day = 1;
+            temp.Cycle = 1;
+            temp.DayWithinCycle = 1;
+            temp.BeginningInventory = StartInventoryQuantity;
+            temp.demand(DemandDistribution);
+            temp.EndingInventory = temp.BeginningInventory - temp.Demand;
+            temp.Daytillarr = StartLeadDays - 1;
+            if (temp.EndingInventory < 0)
+            {
+                temp.ShortageQuantity = -1 * temp.EndingInventory;
+                temp.EndingInventory = 0;
+            }
+            SimulationTable.Add(temp);
+            O_Quantity = StartOrderQuantity;
 
-        public void start_simulation() { }
+            temp = new SimulationCase();
+            SimulationTable.Add(temp);
+            for(int i = 1; i<NumberOfDays; i++)
+            {
+                temp_shortage = SimulationTable[i - 1].ShortageQuantity;
+                SimulationTable[i].Day = SimulationTable[i - 1].Day + 1;
+                SimulationTable[i].BeginningInventory = SimulationTable[i - 1].EndingInventory;
+
+                if(SimulationTable[i-1].DayWithinCycle == 5)
+                {
+                    SimulationTable[i].Cycle = SimulationTable[i - 1].Cycle + 1;
+                    SimulationTable[i].DayWithinCycle = 1;
+                }
+                else
+                {
+                    SimulationTable[i].Cycle = SimulationTable[i - 1].Cycle;
+                    SimulationTable[i].DayWithinCycle = SimulationTable[i - 1].DayWithinCycle + 1;
+                }
+
+                SimulationTable[i].demand(DemandDistribution);
+                SimulationTable[i].EndingInventory = SimulationTable[i].BeginningInventory - SimulationTable[i].Demand;
+
+                if (SimulationTable[i - 1].Daytillarr > 0)
+                {
+                    SimulationTable[i].Daytillarr = SimulationTable[i - 1].Daytillarr - 1;
+                }
+                else
+                {
+                    if (SimulationTable[i - 1].Daytillarr == 0 && SimulationTable[i - 2].Daytillarr == 1)
+                    {
+                        SimulationTable[i].BeginningInventory += O_Quantity;
+                        SimulationTable[i].demand(DemandDistribution);
+                        SimulationTable[i].EndingInventory = SimulationTable[i].BeginningInventory - SimulationTable[i].Demand - SimulationTable[i - 1].ShortageQuantity;
+                        temp_shortage = 0;
+                    }
+                }
+
+                if (SimulationTable[i].EndingInventory < 0)
+                {
+                    SimulationTable[i].ShortageQuantity = -1 * SimulationTable[i].EndingInventory + temp_shortage;
+                    SimulationTable[i].EndingInventory = 0;
+                }
+                else if (SimulationTable[i].EndingInventory == 0)
+                    SimulationTable[i].ShortageQuantity = SimulationTable[i - 1].ShortageQuantity;
+
+                if (SimulationTable[i].DayWithinCycle == ReviewPeriod && i != NumberOfDays - 1)
+                {
+                    temp = new SimulationCase();
+                    SimulationTable.Add(temp);   
+                    SimulationTable[i].order(LeadDaysDistribution, OrderUpTo);
+                    O_Quantity = SimulationTable[i].OrderQuantity;
+                }
+                else
+                {
+                    if(i != NumberOfDays - 1)
+                    {
+                        temp = new SimulationCase();
+                        SimulationTable.Add(temp);
+                    }
+                }
+                
+            }
+            
+
+        }
         public void generate_cumulative_range(List<Distribution> dist)
         {
             int size = dist.Count;

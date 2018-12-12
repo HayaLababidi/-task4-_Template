@@ -62,9 +62,7 @@ namespace InventoryModels
             temp = new SimulationCase();
             SimulationTable.Add(temp);
             for (int i = 1; i < NumberOfDays; i++)
-            {
-                //SimulationTable[i].RandomLeadDays = 1;//solves the exception 
-                temp_shortage = SimulationTable[i - 1].ShortageQuantity;
+            {   temp_shortage = SimulationTable[i - 1].ShortageQuantity;
                 SimulationTable[i].Day = SimulationTable[i - 1].Day + 1;
                 SimulationTable[i].BeginningInventory = SimulationTable[i - 1].EndingInventory;
 
@@ -105,18 +103,13 @@ namespace InventoryModels
                 else if (SimulationTable[i].EndingInventory == 0)
                     SimulationTable[i].ShortageQuantity = SimulationTable[i - 1].ShortageQuantity;
 
-                if (SimulationTable[i].DayWithinCycle == ReviewPeriod) //&& i != NumberOfDays - 1)
+                if (SimulationTable[i].DayWithinCycle == ReviewPeriod)
                 {
                     SimulationTable[i].order(LeadDaysDistribution, OrderUpTo);
                     O_Quantity = SimulationTable[i].OrderQuantity;
-                    //temp = new SimulationCase();
-                    //SimulationTable.Add(temp);   
-
+                    
                 }
-                else
-                {
-                    //nothing 
-                }
+                
                 if (i != NumberOfDays - 1)
                 {
                     temp = new SimulationCase();

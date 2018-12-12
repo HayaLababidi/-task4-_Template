@@ -61,13 +61,14 @@ namespace InventoryModels
 
             temp = new SimulationCase();
             SimulationTable.Add(temp);
-            for(int i = 1; i<NumberOfDays; i++)
+            for (int i = 1; i < NumberOfDays; i++)
             {
+                //SimulationTable[i].RandomLeadDays = 1;//solves the exception 
                 temp_shortage = SimulationTable[i - 1].ShortageQuantity;
                 SimulationTable[i].Day = SimulationTable[i - 1].Day + 1;
                 SimulationTable[i].BeginningInventory = SimulationTable[i - 1].EndingInventory;
 
-                if(SimulationTable[i-1].DayWithinCycle == 5)
+                if (SimulationTable[i - 1].DayWithinCycle == 5)
                 {
                     SimulationTable[i].Cycle = SimulationTable[i - 1].Cycle + 1;
                     SimulationTable[i].DayWithinCycle = 1;
@@ -104,24 +105,27 @@ namespace InventoryModels
                 else if (SimulationTable[i].EndingInventory == 0)
                     SimulationTable[i].ShortageQuantity = SimulationTable[i - 1].ShortageQuantity;
 
-                if (SimulationTable[i].DayWithinCycle == ReviewPeriod && i != NumberOfDays - 1)
+                if (SimulationTable[i].DayWithinCycle == ReviewPeriod) //&& i != NumberOfDays - 1)
                 {
-                    temp = new SimulationCase();
-                    SimulationTable.Add(temp);   
                     SimulationTable[i].order(LeadDaysDistribution, OrderUpTo);
                     O_Quantity = SimulationTable[i].OrderQuantity;
+                    //temp = new SimulationCase();
+                    //SimulationTable.Add(temp);   
+
                 }
                 else
                 {
-                    if(i != NumberOfDays - 1)
-                    {
-                        temp = new SimulationCase();
-                        SimulationTable.Add(temp);
-                    }
+                    //nothing 
                 }
-                
+                if (i != NumberOfDays - 1)
+                {
+                    temp = new SimulationCase();
+                    SimulationTable.Add(temp);
+                }
+
+
             }
-            
+
 
         }
         public void generate_cumulative_range(List<Distribution> dist)
@@ -174,13 +178,13 @@ namespace InventoryModels
                 {
                     StartLeadDays = int.Parse(SR.ReadLine());
                     SR.ReadLine();
-                    continue;                   
+                    continue;
                 }
                 else if (str == "StartInventoryQuantity")
                 {
                     StartInventoryQuantity = int.Parse(SR.ReadLine());
                     SR.ReadLine();
-                    continue;                  
+                    continue;
                 }
                 else if (str == "StartOrderQuantity")
                 {
@@ -222,7 +226,7 @@ namespace InventoryModels
                         LeadDaysDistribution.Add(LTD);
                     }
                     generate_cumulative_range(LeadDaysDistribution);
-                    continue;                   
+                    continue;
                 }
             }
             SR.Close();
